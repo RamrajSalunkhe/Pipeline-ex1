@@ -4,11 +4,15 @@ pipeline{
     stages{
 
         stage("compile"){
+            step{
             bat 'javac tet.java'
+            }
         }
 
         stage("run"){
+            step{
             bat "java tet"
+            }
         }
     }
 }
