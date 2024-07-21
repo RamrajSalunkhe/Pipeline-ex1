@@ -1,17 +1,16 @@
-pipeline{
+pipeline {
     agent any
 
-    stages{
-
-        stage("compile"){
-            step{
-            bat 'javac tet.java'
+    stages {
+        stage("compile") {
+            steps {
+                bat 'javac tet.java'
             }
         }
 
-        stage("run"){
-            step{
-            bat "java tet"
+        stage("run") {
+            steps {
+                bat 'java tet'
             }
         }
     }
